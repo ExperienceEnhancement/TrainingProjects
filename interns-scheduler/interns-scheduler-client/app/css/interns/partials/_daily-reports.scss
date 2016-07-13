@@ -1,0 +1,16 @@
+.calendar-wrapper {
+  display: inline-block;
+}
+
+.daily-report-wrapper {
+  .report-controls {
+    display: flex;
+    justify-content: space-between;
+    .add-remove-task-buttons {
+
+    }
+    .save-cancel-buttons {
+
+    }
+  }
+}
