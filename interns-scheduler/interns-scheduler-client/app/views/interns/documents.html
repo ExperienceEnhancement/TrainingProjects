@@ -1,0 +1,24 @@
+<div ng-controller="DocumentsController">
+
+</div>
+<div class="container">
+    <form name="documentsForm">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <span class="glyphicon glyphicon-cloud-upload"></span>
+                        <h2>File Uploader</h2>
+                        <h4>coligo.io</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar"></div>
+                        </div>
+                        <button class="btn btn-lg upload-btn" ng-click="uploadBtnClick()" type="button">Upload File</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input id="upload-input" type="file" name="documents" onchange="angular.element(this).scope().uploadInputChange(this)" multiple="multiple"></br>
+    </form>
+</div>

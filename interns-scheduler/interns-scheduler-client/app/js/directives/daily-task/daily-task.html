@@ -1,8 +1,8 @@
 <tr>
-    <td><input ng-readonly="task.id" class="form-control task-description" type="text" ng-model="task.description"></td>
-    <td><input ng-readonly="task.id" class="form-control task-hours" type="number" ng-model="task.hours"></td>
-    <td>
-        <button ng-show="task.id" class="btn btn-sm btn-primary edit-btn">Edit</button>
-        <button class="btn btn-sm btn-danger delete-btn">Delete</button>
+    <td><input ng-readonly="task._id" class="form-control task-description" type="text" ng-model="task.description"></td>
+    <td><input ng-readonly="task._id" class="form-control task-hours" type="number" ng-model="task.hours"></td>
+    <td class="daily-task-buttons-cell">
+        <button ng-show="task._id" class="btn btn-sm btn-primary edit-btn">Edit</button>
+        <button ng-show="task._id" class="btn btn-sm btn-danger delete-btn" ng-click="deleteTask(task._id)">Delete</button>
     </td>
 </tr>

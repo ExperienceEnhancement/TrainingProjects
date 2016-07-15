@@ -1,2 +1,14 @@
-.calendar-wrapper{display:inline-block}.daily-report-wrapper .report-controls{display:flex;justify-content:space-between}
+.calendar-wrapper {
+  display: inline-block; }
+
+.daily-report-wrapper .report-controls {
+  display: flex;
+  justify-content: space-between; }
+
+.remove-task-btn:hover {
+  cursor: pointer; }
+
+.table > tbody > tr > td.daily-task-buttons-cell {
+  vertical-align: middle; }
+
 /*# sourceMappingURL=interns.css.map */

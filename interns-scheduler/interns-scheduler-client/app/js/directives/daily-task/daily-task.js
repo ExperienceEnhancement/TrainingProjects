@@ -6,6 +6,7 @@ app.directive('dailyTask', [function () {
             $element.find('.edit-btn').on('click', function () {
                 $element.find('.task-description').removeAttr('readonly');
                 $element.find('.task-hours').removeAttr('readonly');
+                $(this).hide();
             });
         },
         templateUrl: '/app/js/directives/daily-task/daily-task.html'

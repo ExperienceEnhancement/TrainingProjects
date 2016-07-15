@@ -1,15 +1,32 @@
-app.factory('dailyReports', function () {
-    var getReportByDate = function (date) {
-        var report = [
-            { id: 1, date: '12.07.2016', description: 'jQuery research', hours: 1},
-            { id: 2, date: '12.07.2016', description: 'EntityFramework research', hours: 4},
-            { id: 3, date: '12.07.2016', description: 'App bugs fixes', hours: 3}
-        ];
-        
-        return report;
+app.factory('dailyReports', function (requester, constants) {
+    var getReportByDate = function (internId, date) {
+        var url = constants.BASE_URL + '/daily-reports/' + internId + '/' + date;
+        var request = requester.get(url, null);
+        return request;
+    };
+    
+    var saveDailyTask = function (dailyTask) {
+        var url = constants.BASE_URL + '/daily-reports';
+        var request = requester.post(url, null, dailyTask);
+        return request;
+    };
+
+    var updateDailyTask = function (dailyTask) {
+        var url = constants.BASE_URL + '/daily-reports';
+        var request = requester.put(url, null, dailyTask);
+        return request;
+    };
+
+    var deleteDailyTask = function (dailyTaskId) {
+        var url = constants.BASE_URL + '/daily-reports/' + dailyTaskId;
+        var request = requester.delete(url, null);
+        return request;
     };
     
     return {
-        byDate: getReportByDate
+        byDate: getReportByDate,
+        saveDailyTask: saveDailyTask,
+        updateDailyTask: updateDailyTask,
+        deleteDailyTask: deleteDailyTask
     }
 });

@@ -47,7 +47,8 @@
   "dependencies": {
     "angular": "^1.5.7",
     "bootstrap": "^3.3.6",
-    "jquery": "^3.1.0"
+    "jquery": "^3.1.0",
+    "moment": "^2.14.1"
   },
   "description": "A starter project for angular js",
   "devDependencies": {

@@ -14,3 +14,11 @@
     }
   }
 }
+
+.remove-task-btn:hover {
+  cursor: pointer;
+}
+
+.table>tbody>tr>td.daily-task-buttons-cell {
+  vertical-align: middle;
+}

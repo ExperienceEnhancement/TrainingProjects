@@ -9,7 +9,12 @@ app.factory('usersData', function () {
         return userData;
     };
 
-    return{
-        getUserData: getUserData
+    var saveUserData = function (userId) {
+        localStorage.setItem('userId', userId);
+    };
+
+    return {
+        userData: getUserData,
+        saveUserData: saveUserData
     }
 });
